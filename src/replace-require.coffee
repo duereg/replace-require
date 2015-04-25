@@ -5,8 +5,9 @@ walk = require 'walk'
 rr = {}
 
 rr.fileHandler = (root, fileStat, next) ->
-  fs.readFile path.resolve(root, fileStat.name), (buffer) ->
-    console.log fileStat.name, buffer.byteLength
+  fs.readFile path.resolve(root, fileStat.name), (err, data) ->
+    throw err if err?
+    console.log root, fileStat.name, data.toString()
     next()
 
 rr.errorsHandler = (root, nodeStatsArray, next) ->
@@ -22,8 +23,8 @@ rr.endHandler = ->
 rr.run = (directory) ->
   walker  = walk.walk(directory, { followLinks: false })
 
-  walker.on("file", fileHandler)
-  walker.on("errors", errorsHandler)
-  walker.on("end", endHandler)
+  walker.on("file", rr.fileHandler)
+  walker.on("errors", rr.errorsHandler)
+  walker.on("end", rr.endHandler)
 
 module.exports = rr
