@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var log = require('verbalize');
+var argv = require('minimist')(process.argv.slice(2));
+
+/**
+ * Everything in the file should be customized
+ */
+
+// Verbalize `runner`
+log.runner = 'replace-require';
+
+// Use `-d` or `--directory` to specify the source file
+var directory  = argv._[0] || argv.d || argv.directory;
+
+if (!directory) {
+  log.error('Please provide a source directory, either as a first argument or with `-d`');
+}
+
+/**
+ * Application
+ */
