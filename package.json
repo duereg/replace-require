@@ -19,11 +19,13 @@
     "url": "https://github.com/duereg/replace-require.git"
   },
   "scripts": {
-    "test": "gulp test"
+    "prepublish": "node_modules/.bin/gulp coffee",
+    "test": "node_modules/.bin/gulp test"
   },
   "dependencies": {
     "minimist": "^1.1.1",
-    "verbalize": "^0.1.2"
+    "verbalize": "^0.1.2",
+    "walk": "^2.3.9"
   },
   "devDependencies": {
     "chai": "^1.9.1",

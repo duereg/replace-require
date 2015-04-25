@@ -2,10 +2,7 @@
 
 var log = require('verbalize');
 var argv = require('minimist')(process.argv.slice(2));
-
-/**
- * Everything in the file should be customized
- */
+var rr = require('../lib/replace-require');
 
 // Verbalize `runner`
 log.runner = 'replace-require';
@@ -15,8 +12,7 @@ var directory  = argv._[0] || argv.d || argv.directory;
 
 if (!directory) {
   log.error('Please provide a source directory, either as a first argument or with `-d`');
+} else {
+  rr.run(directory);
 }
 
-/**
- * Application
- */

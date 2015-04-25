@@ -8,5 +8,4 @@ chai.use require 'sinon-chai'
 
 describe 'replace-require', ->
   it 'works', ->
-    actual = replaceRequire 'World'
-    expect(actual).to.eql 'Hello World'
+    expect(replaceRequire.run).to.be.ok
