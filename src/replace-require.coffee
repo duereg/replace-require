@@ -7,7 +7,12 @@ rr = {}
 rr.fileHandler = (root, fileStat, next) ->
   fs.readFile path.resolve(root, fileStat.name), (err, data) ->
     throw err if err?
-    console.log root, fileStat.name, data.toString()
+
+    pattern = /let\s.*\srequire.*\n/
+    fileContents = data.toString()
+    matches = pattern.exec fileContents
+
+    console.log root, fileStat.name, matches
     next()
 
 rr.errorsHandler = (root, nodeStatsArray, next) ->
