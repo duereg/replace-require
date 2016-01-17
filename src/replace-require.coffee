@@ -26,6 +26,7 @@ rr.fileHandler = (root, fileStat, next) ->
         tempStr = tempStr.replace('=', '')
         tempStr = tempStr.replace('=from', 'from')
         tempStr = tempStr.replace('let', 'import')
+        tempStr = tempStr.replace('const', 'import')
         console.log(tempStr)
         lines[index] = tempStr
         i++
