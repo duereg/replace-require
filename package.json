@@ -1,6 +1,6 @@
 {
   "name": "replace-require",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Replace require statements with import statements",
   "keywords": [
     "import",
