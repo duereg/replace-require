@@ -1,5 +1,7 @@
 # replace-require
 
+Replace require statements with import statements
+
 [![Dependency status](https://img.shields.io/david/duereg/replace-require.svg?style=flat)](https://david-dm.org/duereg/replace-require)
 [![devDependency Status](https://img.shields.io/david/dev/duereg/replace-require.svg?style=flat)](https://david-dm.org/duereg/replace-require#info=devDependencies)
 [![Build Status](https://img.shields.io/travis/duereg/replace-require.svg?style=flat&branch=master)](https://travis-ci.org/duereg/replace-require)
@@ -20,7 +22,7 @@
 
 The MIT License (MIT)
 
-Copyright 2015 Matt
+Copyright 2019 Matt
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

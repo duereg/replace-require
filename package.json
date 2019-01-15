@@ -1,15 +1,16 @@
 {
   "name": "replace-require",
   "version": "1.0.2",
-  "description": "Awesome module",
+  "description": "Replace require statements with import statements",
   "keywords": [
-    "keyword1",
-    "keyword2"
+    "import",
+    "require",
+    "replace"
   ],
   "homepage": "https://github.com/duereg/replace-require",
   "bugs": "https://github.com/duereg/replace-require/issues",
   "author": {
-    "name": "Matt",
+    "name": "Matt Blair",
     "email": "",
     "url": "https://github.com/duereg"
   },
