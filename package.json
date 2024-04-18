@@ -2,6 +2,7 @@
   "name": "replace-require",
   "version": "1.1.0",
   "description": "Replace require statements with import statements",
+  "bin": "./bin/replace-require",
   "keywords": [
     "import",
     "require",
