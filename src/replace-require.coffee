@@ -32,7 +32,7 @@ rr.fileHandler = (root, fileStat, next) ->
         i++
 
     translatedFile = lines.join('\n')
-    fs.writeFile(path.join(root, fileStat.name), translatedFile)
+    fs.writeFile(path.join(root, fileStat.name), translatedFile, console.error)
     next()
 
 rr.errorsHandler = (root, nodeStatsArray, next) ->
